@@ -16,8 +16,8 @@ public class Audio_Book extends Title
     {
         // (duration in minutes * 0,5) * litteraturetype * copies
 
-        double aPoints = (durationInMinutes * 0.5) * convertLiteratureType() * copies;
+        double points = (durationInMinutes * 0.5) * convertLiteratureType() * copies;
 
-        return aPoints;
+        return points;
     }
 }

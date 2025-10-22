@@ -12,7 +12,10 @@ public abstract class Title
 
     protected double calculateRoyalty()
     {
-        return 0;
+        // points * RATE
+        double royalty = calculatePoint() * RATE;
+
+        return royalty;
     }
 
     protected abstract double calculatePoint();
@@ -25,28 +28,33 @@ public abstract class Title
         if (bookType == null)
         {
             System.err.println("Incorrect booktype.");
+            return 0;
         }
 
-        if (bookType.toUpperCase().contains("BI"))
+        bookType = bookType.toUpperCase();
+
+        if (bookType.contains("BI") || bookType.contains("TE"))
         {
             bookPoints = 3;
-        } else if (bookType.toUpperCase().contains("TE"))
-        {
-            bookPoints = 3;
-        } else if (bookType.toUpperCase().contains("LYRIK"))
+        }
+        else if (bookType.contains("LYRIK"))
         {
             bookPoints = 6;
-        } else if (bookType.toUpperCase().contains("SKØN"))
+        }
+        else if (bookType.contains("SKØN"))
         {
             bookPoints = 1.7;
-        } else if (bookType.toUpperCase().contains("FAG"))
+        }
+        else if (bookType.contains("FAG"))
         {
             bookPoints = 1;
-        } else
-            bookPoints = 0;
+        }
+        else
+        {
             System.err.println("Incorrect booktype.");
+            bookPoints = 0;
+        }
 
         return bookPoints;
     }
-
 }

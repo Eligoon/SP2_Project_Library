@@ -15,8 +15,8 @@ public class Printed_Book extends Title
     {
         // pages * literature type * copies
 
-       double pPoints = pages * convertLiteratureType() * copies;
+       double points = pages * convertLiteratureType() * copies;
 
-       return pPoints;
+       return points;
     }
 }
