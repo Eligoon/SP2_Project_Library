@@ -12,8 +12,12 @@ public class Audio_Book extends Title
 
 
     @Override
-    public double calculatePoint()
+    protected double calculatePoint()
     {
-        return 0;
+        // (duration in minutes * 0,5) * litteraturetype * copies
+
+        double aPoints = (durationInMinutes * 0.5) * convertLiteratureType() * copies;
+
+        return aPoints;
     }
 }

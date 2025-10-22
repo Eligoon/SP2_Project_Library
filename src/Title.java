@@ -15,10 +15,38 @@ public abstract class Title
         return 0;
     }
 
-    public abstract double calculatePoint();
+    protected abstract double calculatePoint();
 
     protected double convertLiteratureType()
     {
-        return 0;
+        double bookPoints;
+        String bookType = literatureType;
+
+        if (bookType == null)
+        {
+            System.err.println("Incorrect booktype.");
+        }
+
+        if (bookType.toUpperCase().contains("BI"))
+        {
+            bookPoints = 3;
+        } else if (bookType.toUpperCase().contains("TE"))
+        {
+            bookPoints = 3;
+        } else if (bookType.toUpperCase().contains("LYRIK"))
+        {
+            bookPoints = 6;
+        } else if (bookType.toUpperCase().contains("SKØN"))
+        {
+            bookPoints = 1.7;
+        } else if (bookType.toUpperCase().contains("FAG"))
+        {
+            bookPoints = 1;
+        } else
+            bookPoints = 0;
+            System.err.println("Incorrect booktype.");
+
+        return bookPoints;
     }
+
 }

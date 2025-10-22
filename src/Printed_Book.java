@@ -11,8 +11,12 @@ public class Printed_Book extends Title
     }
 
     @Override
-    public double calculatePoint()
+    protected double calculatePoint()
     {
-        return 0;
+        // pages * literature type * copies
+
+       double pPoints = pages * convertLiteratureType() * copies;
+
+       return pPoints;
     }
 }
