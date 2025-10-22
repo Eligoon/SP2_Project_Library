@@ -12,16 +12,23 @@ public class Author
 
     public void addTitle(Title title)
     {
-
+        titles.add(title);
     }
 
-    public double calculateRoyalty()
+    public double calculateRoyalties()
     {
-        return 0;
+        // points for Audio book * RATE + points for physical book * RATE
+        double totalRoyalty = 0;
+
+        for (Title t : titles)
+        {
+            totalRoyalty += t.calculateRoyalty();
+        }
+        return totalRoyalty;
     }
 
     public String getName()
     {
-        return "";
+        return name;
     }
 }
