@@ -35,6 +35,7 @@ public class LibraryRoyaltyCalculator
         System.out.printf("Author %s: %.2f kr. %n", author2.getName(), author2.calculateRoyalties());
         System.out.printf("Author %s: %.2f kr. %n", author3.getName(), author3.calculateRoyalties());
 
-        // To my great annoyance, the math is off by a bit. Some float points out there not mathing!
+        // To my great annoyance, the math is off by a bit.
+        // Some float points out there are not mathing right!
     }
 }
