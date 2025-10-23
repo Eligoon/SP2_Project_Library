@@ -11,6 +11,9 @@ public class EAudio_Book extends Net_Title implements IAudio_Book
     @Override
     protected double calculatePoint()
     {
-        return 0;
+        // duration in minutes divided by 2 * literature type * ((reach * 5) + (availability * 0,5) + usefactor))
+        double points = (durationInMinutes / 2) * convertLiteratureType() * getPseudoCopies();
+
+        return points;
     }
 }

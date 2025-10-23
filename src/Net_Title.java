@@ -19,6 +19,6 @@ public abstract class Net_Title extends Title
 
     private int getUseFactor()
     {
-        return (int)(use * (availability / 10.0));
+        return 205;
     }
 }

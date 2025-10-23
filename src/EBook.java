@@ -14,8 +14,8 @@ public class EBook extends Net_Title
     @Override
     protected double calculatePoint()
     {
-        // calculated pages * literature type * ((reach * 5) + (availability * 0,5) + use))
-        double points = calculatePages() * convertLiteratureType(); // continue
+        // calculated pages * literature type * ((reach * 5) + (availability * 0,5) + usefactor))
+        double points = calculatePages() * convertLiteratureType() * getPseudoCopies();
 
         return points;
     }
