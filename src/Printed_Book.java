@@ -3,8 +3,9 @@ public class Printed_Book extends Physical_Title
 {
     private int pages;   // Number of pages in the book
 
-    public Printed_Book(String title, String literatureType, int pages) {
-        super(title, literatureType);
+    public Printed_Book(String title, String literatureType, int copies, int pages)
+    {
+        super(title, literatureType, copies);
         this.pages = pages;
     }
 
