@@ -1,14 +1,11 @@
 // Represents a printed (physical) book version of a title
-public class Printed_Book extends Title
+public class Printed_Book extends Physical_Title
 {
     private int pages;   // Number of pages in the book
-    private int copies;  // Number of copies distributed
 
-    public Printed_Book(String title, String literatureType, int pages, int copies)
-    {
+    public Printed_Book(String title, String literatureType, int pages) {
         super(title, literatureType);
         this.pages = pages;
-        this.copies = copies;
     }
 
     @Override
