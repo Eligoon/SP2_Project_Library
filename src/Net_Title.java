@@ -1,22 +1,26 @@
 public abstract class Net_Title extends Title
 {
-    private int availability;
-    private int reach;
-    private int use;
+    private int availability;  // Number of available copies or digital availability (number of counties having the books)
+    private int reach;         // Reach (number of counties that have the book lent out currently)
+    private int use;           // Usage count (how many books is being lent, giving a certain amount of points)
 
+    // Constructor initializing title, literature type, availability, reach, and usage metrics
     public Net_Title(String title, String literatureType, int availability, int reach, int use)
     {
-        super(title, literatureType);
+        super(title, literatureType);  // Call parent Title constructor
         this.availability = availability;
         this.reach = reach;
         this.use = use;
     }
 
+    // Calculate a composite "pseudo copies" metric combining reach, availability, and usage factors
     protected double getPseudoCopies()
     {
-        return (reach * 5) + (availability * 0.5) + getUseFactor();
+        // reach multiplied by 5, availability by 0.5, plus a use factor based on use thresholds
+        return (reach * 5.0) + (availability * 0.5) + getUseFactor();
     }
 
+    // Private helper to determine the use factor based on the use count thresholds
     private int getUseFactor()
     {
         if (use >= 0 && use <= 25)
@@ -57,4 +61,3 @@ public abstract class Net_Title extends Title
         }
     }
 }
-
