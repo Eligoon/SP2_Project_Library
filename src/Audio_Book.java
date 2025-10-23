@@ -1,5 +1,5 @@
 // Represents an audiobook version of a title
-public class Audio_Book extends Physical_Title
+public class Audio_Book extends Physical_Title implements IAudio_Book
 {
     private int durationInMinutes;   // Total length of the audiobook
 

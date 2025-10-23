@@ -1,4 +1,4 @@
-public class EAudio_Book extends Net_Title
+public class EAudio_Book extends Net_Title implements IAudio_Book
 {
     private int durationInMinutes;
 
