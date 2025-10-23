@@ -1,7 +1,8 @@
+// Represents a printed (physical) book version of a title
 public class Printed_Book extends Title
 {
-  private int pages;
-  private int copies;
+    private int pages;   // Number of pages in the book
+    private int copies;  // Number of copies distributed
 
     public Printed_Book(String title, String literatureType, int pages, int copies)
     {
@@ -13,10 +14,9 @@ public class Printed_Book extends Title
     @Override
     protected double calculatePoint()
     {
-        // pages * literature type * copies
-
-       double points = pages * convertLiteratureType() * copies;
-
-       return points;
+        // Formula for printed book points:
+        // pages * literatureTypeMultiplier * numberOfCopies
+        double points = pages * convertLiteratureType() * copies;
+        return points;
     }
 }
