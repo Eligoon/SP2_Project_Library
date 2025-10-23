@@ -14,11 +14,11 @@ public abstract class Net_Title extends Title
 
     protected double getPseudoCopies()
     {
-        return 0;
+        return (reach * 5) + (availability * 0.5) + getUseFactor();
     }
 
     private int getUseFactor()
     {
-        return 0;
+        return (int)(use * (availability / 10.0));
     }
 }

@@ -14,11 +14,23 @@ public class EBook extends Net_Title
     @Override
     protected double calculatePoint()
     {
-        return 0;
+        // calculated pages * literature type * ((reach * 5) + (availability * 0,5) + use))
+        double points = calculatePages() * convertLiteratureType(); // continue
+
+        return points;
     }
 
     private double calculatePages()
     {
-        return 0;
+        double pageNum = 0;
+
+        if (isIllustrated == false)
+        {
+            pageNum = characters / 1800 + 20;
+        }
+        else
+            pageNum = (characters / 1800 + 20) * 1.10;
+
+        return pageNum;
     }
 }
