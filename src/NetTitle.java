@@ -1,11 +1,11 @@
-public abstract class Net_Title extends Title
+public abstract class NetTitle extends Title
 {
     private int availability;  // Number of available copies or digital availability (number of counties having the books)
     private int reach;         // Reach (number of counties that have the book lent out currently)
     private int use;           // Usage count (how many books is being lent, giving a certain amount of points)
 
     // Constructor initializing title, literature type, availability, reach, and usage metrics
-    public Net_Title(String title, String literatureType, int availability, int reach, int use)
+    public NetTitle(String title, String literatureType, int availability, int reach, int use)
     {
         super(title, literatureType);  // Call parent Title constructor
         this.availability = availability;

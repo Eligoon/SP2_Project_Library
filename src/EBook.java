@@ -1,4 +1,4 @@
-public class EBook extends Net_Title
+public class EBook extends NetTitle
 {
     private int characters;            // Number of characters in the eBook text
     private boolean isIllustrated;    // Flag to indicate if the eBook contains illustrations

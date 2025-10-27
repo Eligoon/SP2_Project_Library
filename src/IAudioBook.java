@@ -1,4 +1,4 @@
-public interface IAudio_Book
+public interface IAudioBook
 {
     // Marker interface for audio books
 }

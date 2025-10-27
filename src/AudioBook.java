@@ -1,9 +1,9 @@
 // Represents an audiobook version of a title
-public class Audio_Book extends Physical_Title implements IAudio_Book
+public class AudioBook extends PhysicalTitle implements IAudioBook
 {
     private int durationInMinutes;   // Total length of the audiobook
 
-    public Audio_Book(String title, String literatureType, int copies, int durationInMinutes)
+    public AudioBook(String title, String literatureType, int copies, int durationInMinutes)
     {
         super(title, literatureType, copies);
         this.durationInMinutes = durationInMinutes;
